@@ -1,5 +1,8 @@
+<%= @list.name %>
+
 <%= link_to 'delete this list', list_path(@list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' } %>
 <%= link_to 'add a bookmark', new_list_bookmark_path(@list) %>
+<%= link_to 'back to lists', lists_path(@lists) %>
 
 <% @list.movies.each do |movie| %>
   <%= movie.title %>
